@@ -23,7 +23,7 @@ do
 done
 
 # Enable funnel service only when it has been explicitly enabled
-if bashio::config.true 'proxy' && bashio::config.true 'funnel'; then
+if bashio::config.true 'funnel'; then
 
   # Check if Tailscale HTTPS is enabled
   if ! /opt/tailscale status --self=true --peers=false --json \
